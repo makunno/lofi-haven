@@ -795,10 +795,12 @@ button {
 .yt-host {
   position: fixed;
   top: 0;
-  left: -10000px;
-  width: 640px;
-  height: 360px;
+  left: 0;
+  width: 200px;
+  height: 112px;
+  opacity: 0;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .yt-badge {
