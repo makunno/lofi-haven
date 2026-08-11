@@ -1,6 +1,6 @@
 # lofi haven
 
-Cozy lofi.cafe-style ambient music radio. Pick a room, press play, and drift away.
+Cozy ambient music radio. Pick a room, press play, and drift away.
 
 ## Live site
 
@@ -27,7 +27,6 @@ Six themed rooms, each with its own animated canvas scene and curated YouTube pl
 - 🏕️ **Campfire** — stories around a crackling fire under open stars
 - 🌊 **Shoreline** — waves rolling in, chilled beats on a golden horizon
 
-The scene takes center stage: stations are small chips, controls live in a bottom dock, and a subtle CRT overlay keeps things cozy. A floating TAPECODE desk clock, custom cursor, and live visualizer round out the ambiance.
 
 ## Keyboard shortcuts
 
