@@ -1,32 +1,51 @@
-# React + TypeScript + Vite
+# lofi haven
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A cozy lofi.cafe-style ambient music player. Pick a room, press play, and drift away — animated background scenes, live YouTube playlists, and a subtle CRT overlay.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **6 themed rooms** — Midnight Rain, Aurora Drift, Neon City, Winter Cabin, Campfire, Shoreline — each with its own animated canvas scene and curated YouTube playlist.
+- **Minimal lofi.cafe-style UI** — the scene takes center stage; stations are small chips, controls live in a bottom dock.
+- **Live YouTube playback** — skip, seek, and browse real track lists in the slide-out playlist panel.
+- **Ambient touches** — a floating TAPECODE desk clock, warm CRT scanlines and vignette, custom cursor, and a live visualizer.
+- **Keyboard shortcuts** — drive everything without touching the mouse.
 
-## React Compiler
+## Keyboard shortcuts
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Key | Action |
+| --- | --- |
+| `Space` | Play / pause |
+| `←` / `→` | Previous / next track |
+| `↑` / `↓` | Volume up / down |
+| `M` | Mute |
+| `P` | Toggle playlist panel |
 
-## Expanding the Oxlint configuration
+## Tech stack
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+- [React](https://react.dev) + [TypeScript](https://www.typescriptlang.org) + [Vite](https://vite.dev)
+- Canvas-based background effects and audio visualizer
+- [YouTube IFrame Player API](https://developers.google.com/youtube/iframe_api_reference) for playlist playback
+- [Oxlint](https://oxc.rs/docs/guide/usage/linter) for linting
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## Getting started
+
+```bash
+npm install
+npm run dev      # start the dev server
+npm run build    # type-check + production build
+npm run lint     # run oxlint
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Project structure
+
+```
+src/
+  components/       UI: StationPicker, StationDock, PlaylistPanel, VhsOverlay, TapeClock, ...
+  hooks/            useAudio (radio), useYouTube (playlist playback)
+  rooms.ts          room/station definitions (scenes, playlists, accents)
+  playerTypes.ts    shared player interface
+```
+
+## Live at
+
+Run it yourself with `npm run dev`, or deploy the `dist/` output from `npm run build` to any static host.
