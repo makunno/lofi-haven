@@ -8,6 +8,7 @@ import { StationDock } from './components/StationDock'
 import { PlaylistPanel } from './components/PlaylistPanel'
 import { CustomCursor } from './components/CustomCursor'
 import { VhsOverlay } from './components/VhsOverlay'
+import { FullscreenButton } from './components/FullscreenButton'
 
 export default function App() {
   const [roomId, setRoomId] = useState(ROOMS[0].id)
@@ -87,10 +88,13 @@ export default function App() {
             <span className="brand-tagline">pick a room, press play, drift away</span>
           </span>
         </div>
-        <div className="topbar-now">
-          <span className="now-dot" aria-hidden />
-          <span>{room.emoji} {room.name}</span>
-          {player.isPlaying && <span className="now-live">LIVE</span>}
+        <div className="topbar-right">
+          <div className="topbar-now">
+            <span className="now-dot" aria-hidden />
+            <span>{room.emoji} {room.name}</span>
+            {player.isPlaying && <span className="now-live">LIVE</span>}
+          </div>
+          <FullscreenButton />
         </div>
       </header>
 
