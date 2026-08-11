@@ -1,14 +1,33 @@
 # lofi haven
 
-A cozy lofi.cafe-style ambient music player. Pick a room, press play, and drift away — animated background scenes, live YouTube playlists, and a subtle CRT overlay.
+Cozy lofi.cafe-style ambient music radio. Pick a room, press play, and drift away.
 
-## Features
+## Live site
 
-- **6 themed rooms** — Midnight Rain, Aurora Drift, Neon City, Winter Cabin, Campfire, Shoreline — each with its own animated canvas scene and curated YouTube playlist.
-- **Minimal lofi.cafe-style UI** — the scene takes center stage; stations are small chips, controls live in a bottom dock.
-- **Live YouTube playback** — skip, seek, and browse real track lists in the slide-out playlist panel.
-- **Ambient touches** — a floating TAPECODE desk clock, warm CRT scanlines and vignette, custom cursor, and a live visualizer.
-- **Keyboard shortcuts** — drive everything without touching the mouse.
+**https://makunno.github.io/lofi-haven/**
+
+## Screenshots
+
+Desktop:
+
+![lofi haven desktop](screenshots/desktop.png)
+
+Mobile:
+
+![lofi haven mobile](screenshots/mobile.png)
+
+## About
+
+Six themed rooms, each with its own animated canvas scene and curated YouTube playlist:
+
+- 🌧️ **Midnight Rain** — droplets on the window, city asleep, coffee still warm
+- 🌌 **Aurora Drift** — dark aurora skies and drifting northern lights
+- 🌆 **Neon City** — late-night streets, neon signs, a city that never sleeps
+- ❄️ **Winter Cabin** — snowfall outside, a fire inside, nowhere to be
+- 🏕️ **Campfire** — stories around a crackling fire under open stars
+- 🌊 **Shoreline** — waves rolling in, chilled beats on a golden horizon
+
+The scene takes center stage: stations are small chips, controls live in a bottom dock, and a subtle CRT overlay keeps things cozy. A floating TAPECODE desk clock, custom cursor, and live visualizer round out the ambiance.
 
 ## Keyboard shortcuts
 
@@ -22,30 +41,6 @@ A cozy lofi.cafe-style ambient music player. Pick a room, press play, and drift 
 
 ## Tech stack
 
-- [React](https://react.dev) + [TypeScript](https://www.typescriptlang.org) + [Vite](https://vite.dev)
+- React + TypeScript + Vite
 - Canvas-based background effects and audio visualizer
-- [YouTube IFrame Player API](https://developers.google.com/youtube/iframe_api_reference) for playlist playback
-- [Oxlint](https://oxc.rs/docs/guide/usage/linter) for linting
-
-## Getting started
-
-```bash
-npm install
-npm run dev      # start the dev server
-npm run build    # type-check + production build
-npm run lint     # run oxlint
-```
-
-## Project structure
-
-```
-src/
-  components/       UI: StationPicker, StationDock, PlaylistPanel, VhsOverlay, TapeClock, ...
-  hooks/            useAudio (radio), useYouTube (playlist playback)
-  rooms.ts          room/station definitions (scenes, playlists, accents)
-  playerTypes.ts    shared player interface
-```
-
-## Live at
-
-Run it yourself with `npm run dev`, or deploy the `dist/` output from `npm run build` to any static host.
+- YouTube IFrame Player API for playlist playback
